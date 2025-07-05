@@ -1,10 +1,10 @@
 // Elemente UI
-const status    = document.getElementById('status');
-const tempo     = document.getElementById('tempo');
-const tempoValue= document.getElementById('tempoValue');
-const startBtn  = document.getElementById('startBtn');
-const stopBtn   = document.getElementById('stopBtn');
-const layer     = document.getElementById('breathLayer');
+const status     = document.getElementById('status');
+const tempo      = document.getElementById('tempo');
+const tempoValue = document.getElementById('tempoValue');
+const startBtn   = document.getElementById('startBtn');
+const stopBtn    = document.getElementById('stopBtn');
+const layer      = document.getElementById('breathLayer');
 
 let isBreathing  = false;
 let breathTimeout;
@@ -39,9 +39,9 @@ stopBtn.addEventListener('click', () => {
 function animateBreath() {
   if (!isBreathing) return;
 
-  const bpm     = +tempo.value;
-  const inhale  = (60 / bpm) * 1000; // milisecunde
-  const exhale  = inhale;            // schema 1: egal
+  const bpm    = +tempo.value;
+  const inhale = (60 / bpm) * 1000; // milisecunde
+  const exhale = inhale;            // schema 1: egal
 
   // Inspir: umple stratul până la 100%
   layer.style.transition = `height ${inhale}ms ease-in`;
